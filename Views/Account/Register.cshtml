@@ -1,0 +1,112 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+<style>
+    .social-icon {
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+</style>
+
+
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body p-4">
+                    <h3 class="text-center mb-4 text-primary">Create Your Account</h3>
+
+                    <form asp-action="Register" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                        <div class="mb-3">
+                            <label asp-for="FullName" class="form-label"></label>
+                            <input asp-for="FullName" class="form-control" placeholder="Full Name" autocomplete="name" aria-label="Full Name" />
+                            <span asp-validation-for="FullName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Email" class="form-label"></label>
+                            <input asp-for="Email" class="form-control" placeholder="Email Address" autocomplete="email" aria-label="Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="Password" class="form-label"></label>
+                            <input asp-for="Password" class="form-control" placeholder="Password" autocomplete="new-password" aria-label="Password" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="ConfirmPassword" class="form-label"></label>
+                            <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm Password" autocomplete="new-password" aria-label="Confirm Password" />
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+
+                        <div class="d-grid mb-3">
+                            <button type="submit" class="btn btn-success">Register</button>
+                        </div>
+
+                        <div class="text-center my-3">
+                            <span class="text-muted">or continue with</span>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-3 mb-3">
+                            <a asp-action="ExternalLogin" asp-controller="Account" asp-route-provider="Google" class="btn btn-outline-primary social-icon"
+                               aria-label="Continue with Google" data-bs-toggle="tooltip" data-bs-placement="top" title="Continue with Google">
+                                <i class="bi bi-google"></i>
+                            </a>
+                            <a asp-action="ExternalLogin" asp-controller="Account" asp-route-provider="GitHub" class="btn btn-outline-dark social-icon"
+                               aria-label="Continue with GitHub" data-bs-toggle="tooltip" data-bs-placement="top" title="Continue with GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            <a asp-action="ExternalLogin" asp-controller="Account" asp-route-provider="Facebook" class="btn btn-outline-primary social-icon"
+                               aria-label="Continue with Facebook" data-bs-toggle="tooltip" data-bs-placement="top" title="Continue with Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a asp-action="ExternalLogin" asp-controller="Account" asp-route-provider="Microsoft" class="btn btn-outline-secondary social-icon"
+                               aria-label="Continue with Microsoft" data-bs-toggle="tooltip" data-bs-placement="top" title="Continue with Microsoft">
+                                <i class="bi bi-microsoft"></i>
+                            </a>
+                            <a asp-action="ExternalLogin" asp-controller="Account" asp-route-provider="LinkedIn" class="btn btn-outline-primary social-icon"
+                               aria-label="Continue with LinkedIn" data-bs-toggle="tooltip" data-bs-placement="top" title="Continue with LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                        </div>
+
+
+                        <div class="text-center">
+                            <span class="text-muted">Already have an account?</span>
+                            <a asp-action="Login" class="btn btn-link px-1">Login</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+    <script>
+        // Initialize Bootstrap tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        });
+    </script>
+}

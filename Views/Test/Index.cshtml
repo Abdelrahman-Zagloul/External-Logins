@@ -1,0 +1,16 @@
+﻿@model ApplicationUser
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card shadow-lg p-4 text-center" style="max-width: 500px; width: 100%;">
+        <h2 class="mb-4 text-primary">👋 Welcome, Mr. @Model.FullName!</h2>
+
+        <p class="lead">You are successfully logged in.</p>
+
+        <a asp-action="Logout" asp-controller="Account" class="btn btn-danger mt-4 w-100">
+            <i class="bi bi-box-arrow-right"></i> Logout
+        </a>
+    </div>
+</div>
