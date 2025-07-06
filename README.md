@@ -105,7 +105,7 @@ This project demonstrates how to integrate **ASP.NET Core Identity** with multip
 
 Abdelrahman Zaglol
 .NET Developer | Computer Science Student
-[LinkedIn](www.linkedin.com/in/abdelrahman-zagloul)
+[LinkedIn](https://www.linkedin.com/in/abdelrahman-zagloul/)
 
 ---
 
