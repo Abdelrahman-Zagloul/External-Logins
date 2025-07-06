@@ -5,6 +5,7 @@ This project demonstrates how to integrate **ASP.NET Core Identity** with multip
 ---
 [![.NET Core](https://img.shields.io/badge/.NET%20Core-8.0-blueviolet)](https://dotnet.microsoft.com/)
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)](http://external-logins.runasp.net/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Abdelrahman%20Zagloul-blue?logo=linkedin)](https://www.linkedin.com/in/abdelrahman-zagloul/)
 
 
 ## 🚀 Features
