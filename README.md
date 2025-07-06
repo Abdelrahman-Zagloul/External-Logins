@@ -3,6 +3,9 @@
 This project demonstrates how to integrate **ASP.NET Core Identity** with multiple **OAuth external login providers**, along with user **email confirmation**, **password reset**, and **traditional username/password login** features.
 
 ---
+[![.NET Core](https://img.shields.io/badge/.NET%20Core-8.0-blueviolet)](https://dotnet.microsoft.com/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-brightgreen)](http://external-logins.runasp.net/)
+
 
 ## 🚀 Features
 
